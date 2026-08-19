@@ -1,0 +1,275 @@
+/* =========================================
+   VARIABLES PRO (Manual Latin Pizza)
+   ========================================= */
+:root {
+  --c-gold: #ffbd59;
+  --c-gold-light: #ffc876;
+  --c-gold-soft: #f1c88b;
+  --c-white: #ffffff;
+  --c-black: #000000;
+  --c-red: #DC3545;
+  --bg-dark: #111111;
+  --bg-light: #f9f9f9;
+  --text-grey: #646262;
+  
+  --font-primary: 'ITC Bauhaus', 'Bauhaus 93', 'Arial Rounded MT Bold', sans-serif;
+  --font-secondary: 'Poppins', sans-serif;
+  
+  --sp-sm: 1rem;
+  --sp-md: 2rem;
+  --sp-lg: 4rem;
+  --sp-xl: 6rem;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-secondary);
+  background-color: var(--c-black);
+  color: var(--c-white);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+.container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 5%; }
+
+/* TIPOGRAFÍA */
+.display-title { font-family: var(--font-primary); font-size: clamp(2.5rem, 5vw, 4.5rem); line-height: 1.1; margin-bottom: 10px; }
+.section-title { font-family: var(--font-primary); font-size: clamp(2.5rem, 4vw, 3.5rem); line-height: 1.1; margin-bottom: 0.5rem; text-transform: uppercase; }
+.section-subtitle { font-family: var(--font-primary); font-size: clamp(1.5rem, 3vw, 2.5rem); margin-bottom: 1.5rem; text-transform: uppercase;}
+.footer-heading { font-family: var(--font-primary); font-size: 2rem; margin-bottom: 1rem; text-transform: uppercase;}
+.bauhaus-font { font-family: var(--font-primary); }
+
+.body-text { font-size: 1.1rem; margin-bottom: 1rem; }
+.small { font-size: 0.95rem; }
+.number { font-family: var(--font-primary); font-size: 4rem; line-height: 1; display: block; margin-bottom: 10px;}
+
+.text-gold { color: var(--c-gold); }
+.text-red { color: var(--c-red); }
+.text-white { color: var(--c-white); }
+.text-black { color: var(--c-black); }
+.text-grey { color: var(--text-grey); }
+
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+.text-uppercase { text-transform: uppercase; }
+.fw-bold { font-weight: 700; }
+.fw-black { font-weight: 800; }
+
+.mt-sm { margin-top: var(--sp-sm); }
+.mt-md { margin-top: var(--sp-md); }
+.mt-lg { margin-top: var(--sp-lg); }
+.mb-sm { margin-bottom: var(--sp-sm); }
+.mb-md { margin-bottom: var(--sp-md); }
+.mb-lg { margin-bottom: var(--sp-lg); }
+.p-md { padding: var(--sp-md); }
+.p-lg { padding: var(--sp-lg); }
+.p-xl { padding: var(--sp-xl); }
+
+/* BOTONES Y BADGES */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  padding: 15px 35px; font-family: var(--font-secondary); font-weight: 700;
+  font-size: 1.1rem; text-transform: uppercase; text-decoration: none;
+  border-radius: 8px; transition: all 0.3s ease; cursor: pointer;
+}
+.btn-red { background: var(--c-red); color: var(--c-white); border: 2px solid var(--c-white); box-shadow: 0 4px 15px rgba(220, 53, 69, 0.4); }
+.btn-red:hover { transform: translateY(-3px); background: #b21f2d; box-shadow: 0 6px 20px rgba(220, 53, 69, 0.6); }
+.btn-outline { background: transparent; color: var(--c-white); border: 2px solid var(--c-white); }
+.btn-outline:hover { background: var(--c-white); color: var(--c-black); }
+.btn-outline-gold { background: transparent; color: var(--c-gold); border: 2px solid var(--c-gold); }
+.btn-outline-gold:hover { background: var(--c-gold); color: var(--c-black); }
+
+.badge { display: inline-block; padding: 10px 30px; border-radius: 50px; font-weight: 700; font-size: 1.1rem; text-transform: uppercase;}
+.badge-white { background: var(--c-white); color: var(--c-black); }
+
+/* LAYOUTS */
+.section { padding: var(--sp-xl) 0; }
+.section-dark { background-color: var(--c-black); }
+.section-light { background-color: var(--bg-light); }
+.section-gold-gradient { background: linear-gradient(135deg, var(--c-gold), var(--c-gold-soft)); }
+
+.grid-layout { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--sp-lg); }
+.grid-layout-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--sp-md); align-items: start; }
+.align-center { align-items: center; }
+
+/* COMPONENTES GENERALES */
+.navbar { position: fixed; top: 0; left: 0; width: 100%; padding: 15px 0; background: rgba(0, 0, 0, 0.8); backdrop-filter: blur(10px); z-index: 1000; transition: all 0.3s ease; border-bottom: 1px solid #333;}
+.nav-container { display: flex; justify-content: space-between; align-items: center; }
+.nav-logo { height: 40px; }
+
+.circle-img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 50%; border: 5px solid var(--c-gold); }
+.circle-img-sm { width: 220px; height: 220px; margin: 0 auto; object-fit: cover; border-radius: 50%; border: 4px solid var(--c-white); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+.shadow-lg { box-shadow: 0 20px 40px rgba(0,0,0,0.6); }
+
+.feature-item { margin-bottom: 20px; display: flex; align-items: center; gap: 15px;}
+.feature-item .number { font-size: 3rem; margin: 0;}
+
+.panel-box { border-radius: 16px; overflow: hidden; box-shadow: 0 15px 35px rgba(0,0,0,0.3); }
+.bg-gold { background-color: var(--c-gold); }
+.bg-black { background-color: var(--c-black); }
+.bg-dark { background-color: var(--bg-dark); }
+.rounded { border-radius: 12px; }
+
+.step-card { background: #111; padding: 30px; border-radius: 12px; border-top: 4px solid var(--c-red); }
+.audience-card { border-top: 4px solid var(--c-gold); }
+
+.cta-banner { background: var(--c-gold); padding: var(--sp-lg); border-radius: 20px; margin-top: var(--sp-xl); }
+
+.footer { padding: var(--sp-xl) 0; }
+.contact-list { list-style: none; }
+.contact-list li { margin-bottom: 0.8rem; }
+
+/* =========================================
+   NUEVA HERO SECTION (LÍNEA DEGRADADA + COMPACTA)
+   ========================================= */
+.hero { 
+  position: relative; 
+  min-height: 100vh; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  background: url('img/pizza fondo 1.jfif') center/cover no-repeat; 
+  padding-top: 60px; /* Reducido para pantallas 100vh */
+  overflow: hidden; 
+}
+
+.hero-overlay { 
+  position: absolute; 
+  inset: 0; 
+  background: rgba(0, 0, 0, 0.55); 
+  z-index: 1; 
+}
+
+.hero-container { 
+  position: relative; 
+  z-index: 2; 
+  width: 100%;
+}
+
+/* La banda gruesa dorada horizontal */
+.hero-banner {
+  position: relative; /* Clave para anclar el botón absoluto */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(90deg, rgba(255, 189, 89, 0.95) 0%, rgba(241, 200, 139, 0.85) 100%);
+  border-radius: 20px;
+  max-width: 900px; /* Ancho más compacto */
+  margin: 0 auto;
+  padding: 2rem 2rem 3.5rem 1rem; /* Padding inferior extra para acomodar el botón */
+  gap: 1.5rem;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+/* Columna de las Pizzas */
+.hero-img-col {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+/* Pizzas sobresaliendo de la caja dorada */
+.floating-pizzas {
+  width: 140%;
+  max-width: 400px; /* Escalado hacia abajo */
+  margin-top: -15%;    
+  margin-bottom: -15%; 
+  margin-left: 10%;   
+  filter: drop-shadow(0 20px 20px rgba(0,0,0,0.5));
+  animation: float 6s ease-in-out infinite;
+  z-index: 3;
+  position: relative;
+}
+
+/* Columna Textos y Logo */
+.hero-text-col {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-right: 1rem;
+}
+
+/* Logo Oficial (Aro Dorado Restablecido) */
+.hero-brand-circle {
+  width: 100%;
+  max-width: 250px; /* Escalado hacia abajo */
+  border-radius: 50%;
+  border: 4px solid var(--c-gold);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+  margin-bottom: 1rem;
+}
+
+.hero-slogan-red {
+  color: var(--c-red);
+  font-family: var(--font-secondary);
+  font-weight: 800;
+  font-size: 1rem; /* Escalado hacia abajo */
+  line-height: 1.4;
+  text-transform: uppercase;
+  margin-bottom: 0; /* El botón ya no está aquí dentro */
+}
+
+/* BOTÓN CENTRADO DEBAJO DEL BANNER */
+.hero-btn-centered {
+  position: absolute;
+  bottom: -24px; /* Hace que rompa el límite de la caja inferior */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  padding: 12px 30px;
+  font-size: 1rem;
+}
+
+.hero-btn-centered:hover {
+  /* Al tener transformaciones absolutas, el hover debe incluir el translate X para no descentrarse */
+  transform: translateX(-50%) translateY(-3px); 
+}
+
+/* Animación levitación de las pizzas */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+/* =========================================
+   ANIMACIONES GENERALES
+   ========================================= */
+[data-animate] { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+[data-animate].is-visible { opacity: 1; transform: translateY(0); }
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+@media (max-width: 868px) {
+  .section { padding: var(--sp-md) 0; }
+  .grid-layout, .grid-layout-3 { text-align: center; }
+  .feature-item { flex-direction: column; text-align: center; }
+  .footer .grid-layout { text-align: center; gap: var(--sp-md); }
+  .footer-social { text-align: center; }
+  
+  /* Ajustes Hero para móviles */
+  .hero-banner {
+    flex-direction: column;
+    padding: 1rem 1rem 3.5rem 1rem;
+    margin-top: 60px;
+  }
+  .floating-pizzas {
+    width: 110%;
+    margin-top: -25%;
+    margin-bottom: 1rem;
+    margin-left: 0;
+  }
+  .hero-btn-centered {
+    bottom: -20px;
+  }
+}
