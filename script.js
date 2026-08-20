@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('is-visible');
-        observer.unobserve(entry.target); // Anima solo la primera vez
+        observer.unobserve(entry.target);
       }
     });
   }, observerOptions);
@@ -31,4 +31,12 @@ document.addEventListener('DOMContentLoaded', () => {
   animatedElements.forEach(element => {
     scrollObserver.observe(element);
   });
+
+  // Soporte de toque táctil en la carta 3D para celulares/tablets
+  const flipCard = document.querySelector('.flip-card');
+  if (flipCard) {
+    flipCard.addEventListener('click', () => {
+      flipCard.classList.toggle('flipped');
+    });
+  }
 });
