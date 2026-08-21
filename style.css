@@ -1,5 +1,5 @@
 /* =========================================
-   VARIABLES PRO (Manual Latin Pizza)
+   VARIABLES LATIN PIZZA
    ========================================= */
 :root {
   --c-gold: #ffbd59;
@@ -7,8 +7,8 @@
   --c-gold-soft: #f1c88b;
   --c-white: #ffffff;
   --c-black: #000000;
+  --c-black-light: #111111;
   --c-red: #DC3545;
-  --bg-dark: #111111;
   --bg-light: #f9f9f9;
   --text-grey: #646262;
   
@@ -35,176 +35,71 @@ body {
 img { max-width: 100%; height: auto; display: block; }
 
 .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 5%; }
+.mx-auto { margin-left: auto; margin-right: auto; }
+.max-w-800 { max-width: 800px; }
 
 /* TIPOGRAFÍA */
-.display-title { font-family: var(--font-primary); font-size: clamp(2.5rem, 5vw, 4.5rem); line-height: 1.1; margin-bottom: 10px; }
 .section-title { font-family: var(--font-primary); font-size: clamp(2.5rem, 4vw, 3.5rem); line-height: 1.1; margin-bottom: 0.5rem; text-transform: uppercase; }
 .section-subtitle { font-family: var(--font-primary); font-size: clamp(1.5rem, 3vw, 2.5rem); margin-bottom: 1.5rem; text-transform: uppercase;}
-.footer-heading { font-family: var(--font-primary); font-size: 2rem; margin-bottom: 1rem; text-transform: uppercase;}
-.bauhaus-font { font-family: var(--font-primary); }
-
-.bene-subtitle {
-  font-family: var(--font-primary);
-  font-size: clamp(2.5rem, 4vw, 3.5rem);
-  line-height: 1.1;
-  font-weight: 800;
-  color: var(--c-white);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 2.5rem;
-  display: block;
-}
-
-.feature-title-large {
-  font-size: clamp(1.5rem, 2.5vw, 2.2rem);
-  line-height: 1.2;
-  margin-top: 1rem;
-}
+.bene-subtitle { font-family: var(--font-primary); font-size: clamp(2rem, 3.5vw, 3rem); line-height: 1.1; font-weight: 800; text-transform: uppercase; margin-bottom: 2rem; display: block; }
+.feature-title-large { font-size: clamp(1.5rem, 2.5vw, 2.2rem); line-height: 1.2; margin-top: 1rem; }
 
 .body-text { font-size: 1.1rem; margin-bottom: 1rem; }
+.text-lg { font-size: 1.3rem; }
+.text-xl { font-size: 1.6rem; }
 .small { font-size: 0.95rem; margin: 0; }
-
-.number { font-family: var(--font-primary); font-size: 4rem; line-height: 1; display: block; margin-bottom: 10px; transition: color 0.3s ease, transform 0.3s ease;}
-
-/* Iconos para tarjetas */
-.icon-large {
-  font-size: 3.5rem;
-  line-height: 1;
-  display: inline-block;
-  transition: transform 0.3s ease;
-}
 
 .text-gold { color: var(--c-gold); }
 .text-red { color: var(--c-red); }
 .text-white { color: var(--c-white); }
 .text-black { color: var(--c-black); }
-.text-grey { color: var(--text-grey); }
-
 .text-center { text-align: center; }
 .text-left { text-align: left; }
-.text-right { text-align: right; }
 .text-uppercase { text-transform: uppercase; }
-.fw-bold { font-weight: 700; margin-bottom: 5px; }
+.fw-bold { font-weight: 700; }
 .fw-black { font-weight: 800; }
 
-.mt-xs { margin-top: 0.4rem; }
 .mt-sm { margin-top: var(--sp-sm); }
 .mt-md { margin-top: var(--sp-md); }
 .mt-lg { margin-top: var(--sp-lg); }
-.mt-xl { margin-top: 3.5rem; }
 .mb-sm { margin-bottom: var(--sp-sm); }
-.mb-md { margin-bottom: var(--sp-md); }
 .mb-lg { margin-bottom: var(--sp-lg); }
-.p-md { padding: var(--sp-md); }
 .p-lg { padding: var(--sp-lg); }
-.p-xl { padding: var(--sp-xl); }
+.ml-sm { margin-left: 1rem; }
 
-/* BOTONES */
+/* BOTONES Y BADGES */
 .btn {
   display: inline-flex; align-items: center; justify-content: center;
   padding: 15px 35px; font-family: var(--font-secondary); font-weight: 700;
   font-size: 1.1rem; text-transform: uppercase; text-decoration: none;
   border-radius: 8px; transition: all 0.3s ease; cursor: pointer;
 }
-.btn-red { background: var(--c-red); color: var(--c-white); border: 2px solid var(--c-white); box-shadow: 0 4px 15px rgba(220, 53, 69, 0.4); }
-.btn-red:hover { transform: translateY(-3px); background: #b21f2d; box-shadow: 0 6px 20px rgba(220, 53, 69, 0.6); }
+.btn-large { padding: 18px 45px; font-size: 1.15rem; border-radius: 12px; }
+.btn-red { background: var(--c-red); color: var(--c-white); border: 2px solid var(--c-red); box-shadow: 0 4px 15px rgba(220, 53, 69, 0.4); }
+.btn-red:hover { transform: translateY(-3px); background: #b21f2d; border-color: #b21f2d; box-shadow: 0 6px 20px rgba(220, 53, 69, 0.6); }
 .btn-outline { background: transparent; color: var(--c-white); border: 2px solid var(--c-white); }
 .btn-outline:hover { background: var(--c-white); color: var(--c-black); }
-.btn-outline-gold { background: transparent; color: var(--c-gold); border: 2px solid var(--c-gold); }
-.btn-outline-gold:hover { background: var(--c-gold); color: var(--c-black); }
+.btn-outline-white { background: transparent; color: var(--c-white); border: 2px solid var(--c-white); }
+.btn-outline-white:hover { background: var(--c-white); color: var(--c-black); }
 
-/* LAYOUTS */
+.badge { display: inline-block; padding: 6px 20px; border-radius: 50px; font-weight: 700; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px;}
+.badge-red { background: var(--c-red); color: var(--c-white); }
+
+/* LAYOUTS GLOBALES */
 .section { padding: var(--sp-xl) 0; position: relative; }
 .section-dark { background-color: var(--c-black); }
 .section-light { background-color: var(--bg-light); }
 .section-gold-gradient { background: linear-gradient(135deg, var(--c-gold), var(--c-gold-soft)); }
+.section-center { text-align: center; }
 
 .grid-layout { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--sp-lg); }
-.grid-layout-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--sp-md); align-items: stretch; }
+.grid-layout-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--sp-md); }
 .align-center { align-items: center; }
 
-/* COMPONENTES GENERALES */
+/* NAVBAR */
 .navbar { position: fixed; top: 0; left: 0; width: 100%; padding: 15px 0; background: rgba(0, 0, 0, 0.85); backdrop-filter: blur(10px); z-index: 1000; transition: all 0.3s ease; border-bottom: 1px solid #333;}
 .nav-container { display: flex; justify-content: space-between; align-items: center; }
-.nav-logo { height: 40px; }
-
-/* ANIMACIÓN Y HOVER EN LA PIZZA DE ALMA LATINA */
-.circle-img { 
-  width: 100%; 
-  aspect-ratio: 1; 
-  object-fit: cover; 
-  border-radius: 50%; 
-  border: 5px solid var(--c-gold); 
-  animation: rotateSlow 45s linear infinite;
-  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s ease;
-}
-
-.circle-img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 35px rgba(255, 189, 89, 0.7);
-  animation-play-state: paused;
-}
-
-@keyframes rotateSlow {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-.circle-img-sm { width: 220px; height: 220px; margin: 0 auto; object-fit: cover; border-radius: 50%; border: 4px solid var(--c-white); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
-.shadow-lg { box-shadow: 0 20px 40px rgba(0,0,0,0.6); }
-
-/* SISTEMA DE INTERACTIVIDAD HOVER ITEMS */
-.feature-item { 
-  margin-bottom: 25px; 
-  display: flex; 
-  align-items: center; 
-  gap: 15px;
-  padding: 10px 15px;
-  border-radius: 12px;
-  transition: transform 0.3s ease, background 0.3s ease;
-}
-.feature-item:hover { transform: translateY(-4px); background: rgba(255, 255, 255, 0.2); }
-.feature-item:hover .number { color: var(--c-red); transform: scale(1.1); }
-.feature-item p { font-size: 1.35rem; line-height: 1.3; margin: 0; }
-
-.feature-item-vertical {
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
-  display: flex;
-  flex-direction: column;
-}
-.feature-item-vertical:hover { transform: translateY(-8px); }
-.section-light .feature-item-vertical:hover { box-shadow: 0 15px 30px rgba(0,0,0,0.1); background: #ffffff; }
-.section-dark .feature-item-vertical:hover { box-shadow: 0 15px 30px rgba(255,189,89,0.1); background: #1a1a1a; }
-.feature-item-vertical.dark-bg:hover { background: #111111; box-shadow: 0 15px 30px rgba(0,0,0,0.3); }
-
-/* Animaciones específicas de texto e iconos en tarjetas oscuras */
-.feature-item-vertical:hover .number { color: var(--c-red); transform: scale(1.05); transform-origin: left; }
-.feature-item-vertical.dark-bg:hover .icon-large { transform: scale(1.15) translateY(-5px); }
-.feature-item-vertical.dark-bg .number { text-align: center; width: 100%; }
-.feature-item-vertical.dark-bg:hover .number { transform-origin: center; }
-
-.panel-box { border-radius: 16px; overflow: hidden; box-shadow: 0 15px 35px rgba(0,0,0,0.3); }
-.bg-gold { background-color: var(--c-gold); }
-.bg-black { background-color: var(--c-black); }
-.bg-dark { background-color: var(--bg-dark); }
-.rounded { border-radius: 12px; }
-
-.pillar-card { background: transparent; padding: 20px; border-radius: 12px; }
-.step-card { background: #111; padding: 30px; border-radius: 12px; border-top: 4px solid var(--c-red); }
-
-/* Tarjetas de audiencia centradas */
-.audience-card { 
-  border-top: 4px solid var(--c-gold); 
-  align-items: center; /* Centra horizontalmente en flex column */
-  justify-content: center;
-  padding: 2.5rem 1.5rem; /* Más espacio para que respire */
-}
-
-.cta-banner { background: var(--c-gold); padding: var(--sp-lg); border-radius: 20px; margin-top: var(--sp-xl); }
-
-.footer { padding: var(--sp-xl) 0; }
-.contact-list { list-style: none; }
-.contact-list li { margin-bottom: 0.8rem; }
+.nav-logo { height: 45px; }
 
 /* =========================================
    1. HERO SECTION
@@ -215,306 +110,184 @@ img { max-width: 100%; height: auto; display: block; }
   display: flex; 
   align-items: center; 
   justify-content: center; 
-  background: url('img/hero-fondo.jpg') center/cover no-repeat; 
+  background: url('img/imagenes-ia-solo-arriba.jpg') center/cover no-repeat; 
+  background-color: #111; /* Fallback */
   padding-top: 80px; 
   padding-bottom: 40px; 
-  overflow: hidden; 
 }
-
 .hero-overlay { 
   position: absolute; 
   inset: 0; 
-  background: rgba(0, 0, 0, 0.55); 
+  background: rgba(0, 0, 0, 0.7); 
   z-index: 1; 
 }
-
-.hero-container { 
-  position: relative; 
-  z-index: 2; 
-  width: 100%;
-  text-align: center;
-}
-
-.hero-content-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-}
+.hero-container { position: relative; z-index: 2; width: 100%; text-align: center; }
+.hero-content-wrapper { display: flex; flex-direction: column; align-items: center; width: 100%; }
 
 .hero-banner {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   background: linear-gradient(90deg, rgba(255, 189, 89, 0.95) 0%, rgba(241, 200, 139, 0.85) 100%);
   border-radius: 20px;
-  max-width: 1000px;
+  max-width: 900px;
   margin: 0 auto;
-  padding: 2rem 2rem 2.5rem 1rem;
-  gap: 1.5rem;
+  padding: 3rem 2rem;
   box-shadow: 0 20px 40px rgba(0,0,0,0.35);
 }
 
-.hero-img-col {
-  flex: 1;
+.hero-text-center { text-align: center; display: flex; flex-direction: column; align-items: center; }
+.hero-brand-logo { max-width: 250px; margin-bottom: 1.5rem; filter: drop-shadow(0 10px 15px rgba(0,0,0,0.3)); }
+.hero-title-main { font-family: var(--font-primary); font-size: clamp(2.5rem, 5vw, 4.5rem); line-height: 1.1; color: var(--c-black); margin-bottom: 1rem; }
+.hero-subtitle { font-family: var(--font-secondary); font-size: clamp(1.2rem, 2.5vw, 1.6rem); font-weight: 700; color: var(--c-black); margin-bottom: 1rem; text-transform: uppercase;}
+.hero-description { font-size: 1.15rem; color: var(--c-black); max-width: 700px; font-weight: 500; }
+
+.hero-btn-container { margin-top: 3rem; z-index: 10; display: flex; flex-wrap: wrap; justify-content: center; gap: 15px;}
+.hero-subtext { font-size: 0.95rem; color: rgba(255, 255, 255, 0.9); margin-top: 1rem; font-weight: 500; width: 100%; text-align: center;}
+
+/* =========================================
+   2. QUÉ ES LATIN PIZZA
+   ========================================= */
+.rounded-img { width: 100%; border-radius: 20px; object-fit: cover; }
+.shadow-lg { box-shadow: 0 20px 40px rgba(0,0,0,0.6); }
+
+.quote-box { border-left: 5px solid var(--c-gold); padding-left: 20px; margin-top: 2rem; }
+.quote-text { font-family: var(--font-primary); font-size: 1.8rem; line-height: 1.2; color: var(--c-white); }
+
+/* NUEVO: Estilo para la frase centrada debajo de la sección 2 */
+.quote-box-centered {
+  max-width: 900px;
+  margin: 3rem auto 0 auto;
+  text-align: center;
+}
+.quote-box-centered .quote-text {
+  font-size: clamp(1.8rem, 3vw, 2.5rem); /* Se adapta según el tamaño de pantalla */
+  line-height: 1.3;
+}
+
+
+/* =========================================
+   3. ECOSISTEMA Y PERTENENCIA
+   ========================================= */
+.ecosystem-graphic {
+  position: relative;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  position: relative;
+  align-items: center;
+  gap: 15px;
+  padding: 2rem 0;
 }
-
-.floating-pizzas {
-  width: 140%;
-  max-width: 480px;
-  filter: drop-shadow(0 20px 20px rgba(0,0,0,0.5));
-  animation: float 6s ease-in-out infinite;
-  z-index: 3;
-  position: relative;
-  margin-top: -10%;
-  margin-bottom: -10%;
+.eco-center img {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  border: 4px solid var(--c-black);
+  margin-bottom: 1rem;
 }
+.eco-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  max-width: 900px;
+}
+.eco-tag {
+  background: var(--c-black);
+  color: var(--c-gold);
+  font-family: var(--font-secondary);
+  font-weight: 700;
+  padding: 12px 25px;
+  border-radius: 50px;
+  font-size: 1rem;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+.eco-tag:hover { transform: translateY(-3px) scale(1.05); background: var(--c-red); color: var(--c-white);}
 
-.hero-text-col {
-  flex: 1.2;
+/* Ajustes para alinear el ecosistema a la derecha armónicamente */
+.ecosystem-graphic.align-right {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding-right: 1.5rem;
+  align-items: flex-end;
+}
+.ecosystem-graphic.align-right .eco-tags {
+  justify-content: flex-end;
 }
 
-.hero-brand-circle {
-  width: 100%;
-  max-width: 280px;
-  border-radius: 50%;
-  border: 4px solid var(--c-gold);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
-  margin-bottom: 1.5rem;
-}
-
-.hero-slogan-red {
-  color: var(--c-red);
-  font-family: var(--font-secondary);
-  font-weight: 800;
-  font-size: 1.15rem; 
-  line-height: 1.4;
-  text-transform: uppercase;
-  margin: 0;
-}
-
-.hero-btn-container {
-  margin-top: 3rem;
-  z-index: 10;
-}
-
-.btn-large {
-  padding: 18px 45px;
-  font-size: 1.15rem;
-  border-radius: 12px;
-}
-
-.hero-subtext {
-  font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.85);
-  margin-top: 0.8rem;
-  font-weight: 500;
-  letter-spacing: 0.5px;
-}
-
-@keyframes float {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-15px); }
-  100% { transform: translateY(0px); }
+/* En teléfonos móviles, vuelve a centrarse para no romper el diseño */
+@media (max-width: 868px) {
+  .ecosystem-graphic.align-right {
+    align-items: center;
+    margin-top: 2rem;
+  }
+  .ecosystem-graphic.align-right .eco-tags {
+    justify-content: center;
+  }
 }
 
 /* =========================================
-   2. Y 3. IMÁGENES DE FONDO CON BAJA OPACIDAD
+   4. NECESIDADES (POR QUÉ ASOCIARTE)
    ========================================= */
-
-.section-bg-overlay {
-  position: relative;
-  background-color: var(--c-black);
+.need-card {
+  background: var(--c-white);
+  padding: 30px 20px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+  border-bottom: 4px solid var(--c-gold);
 }
+.need-card:hover { transform: translateY(-5px); }
+.need-card .icon-large { font-size: 3rem; margin-bottom: 15px; display: block; }
+.need-card p { color: var(--c-black); font-size: 1.1rem; margin: 0; }
+.bg-red { background-color: var(--c-red); border-bottom: 4px solid var(--c-black); }
+.bg-red p { color: var(--c-white); }
+.highlight-card { transform: scale(1.05); }
+.highlight-card:hover { transform: scale(1.05) translateY(-5px); }
+
+/* =========================================
+   5. MARKETING (BENEFICIOS)
+   ========================================= */
+.section-bg-overlay { position: relative; background-color: var(--c-black); }
 .section-bg-overlay::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: url('img/alma-latina-fondo.jpg') center/cover no-repeat;
-  opacity: 0.18; 
-  z-index: 1;
+  content: ''; position: absolute; inset: 0;
+  background: url('[IMAGEN_FONDO_OPCIONAL]') center/cover no-repeat;
+  opacity: 0.15; z-index: 1;
 }
 .section-bg-overlay .container { position: relative; z-index: 2; }
 
-.section-gold-bg-overlay {
+.bg-black-card { background: var(--c-black-light); }
+.rounded-xl { border-radius: 24px; }
+.border-gold { border: 2px solid rgba(255, 189, 89, 0.3); }
+
+.custom-list { list-style: none; padding: 0; margin: 0; }
+.custom-list li {
   position: relative;
-  background: linear-gradient(135deg, rgba(255, 189, 89, 0.92) 0%, rgba(241, 200, 139, 0.88) 100%);
+  padding-left: 35px;
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+  color: var(--c-white);
 }
-.section-gold-bg-overlay::before {
-  content: '';
+.custom-list li::before {
+  content: '✅';
   position: absolute;
-  inset: 0;
-  background: url('img/beneficios-fondo.jfif') center/cover no-repeat;
-  opacity: 0.15; 
-  mix-blend-mode: multiply; 
-  z-index: 1;
-}
-.section-gold-bg-overlay .container { position: relative; z-index: 2; }
-
-/* =========================================
-   4. MODELO DE ÉXITO
-   ========================================= */
-.modelo-exito-panel {
-  padding: 0;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
-  background: 
-    linear-gradient(135deg, rgba(255, 189, 89, 0.94) 0%, rgba(241, 200, 139, 0.88) 100%),
-    url('img/modelo-exito-pizza.png') center/cover no-repeat;
+  left: 0;
+  top: 2px;
+  font-size: 1.2rem;
 }
 
-.modelo-exito-grid {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  padding: var(--sp-lg);
-  gap: var(--sp-md);
+.quote-box-solid {
+  background: var(--c-gold);
+  padding: 20px;
+  border-radius: 12px;
 }
-
-.modelo-exito-text { flex: 1.3; }
-
-.modelo-exito-img-col {
-  flex: 0.9;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.modelo-exito-img {
-  width: 100%;
-  max-width: 380px;
-  height: auto;
-  border-radius: 16px;
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-  transition: transform 0.4s ease;
-}
-
-.modelo-exito-img:hover { transform: scale(1.03) rotate(1deg); }
-
-/* =========================================
-   5. CARTA 3D FLIP CARD
-   ========================================= */
-.flip-card-wrapper {
-  margin-top: var(--sp-xl);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-}
-
-.flip-card {
-  background-color: transparent;
-  width: 100%;
-  max-width: 950px;
-  height: 400px;
-  perspective: 1200px;
-  cursor: pointer;
-}
-
-.flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 1.2s ease-in-out;
-  transform-style: preserve-3d;
-  border-radius: 20px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
-}
-
-.flip-card:hover .flip-card-inner,
-.flip-card.flipped .flip-card-inner {
-  transform: rotateY(180deg);
-}
-
-.flip-card-front, .flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  border-radius: 20px;
-  padding: 2.2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  box-sizing: border-box;
-}
-
-.flip-card-front {
-  background: 
-    linear-gradient(135deg, rgba(255, 189, 89, 0.85) 0%, rgba(241, 200, 139, 0.85) 100%),
-    url('img/flip-card-fondo.jpg') center/cover no-repeat;
-  color: var(--c-black);
-}
-
-.flip-subhead {
-  font-family: var(--font-secondary);
-  font-size: clamp(1.4rem, 2.5vw, 2.2rem);
-  font-weight: 800;
-  text-transform: uppercase;
-  color: var(--c-black);
-  margin-bottom: 0.3rem;
-  letter-spacing: 1px;
-}
-
-.flip-title {
+.quote-text-sm {
   font-family: var(--font-primary);
-  font-size: clamp(3rem, 5.5vw, 4.8rem);
-  line-height: 1;
+  font-size: 1.2rem;
   color: var(--c-black);
-  text-transform: uppercase;
-  margin-bottom: 0.8rem;
-}
-
-.flip-hint {
-  font-size: 0.82rem;
-  font-weight: 500;
-  background: transparent;
-  color: rgba(0, 0, 0, 0.55);
-  margin-top: 0.3rem;
-  letter-spacing: 0.5px;
-  font-style: italic;
-}
-
-.flip-card-back {
-  background: 
-    linear-gradient(135deg, rgba(255, 200, 118, 0.96) 0%, rgba(255, 189, 89, 0.96) 100%),
-    url('img/flip-card-fondo.jpg') center/cover no-repeat;
-  color: var(--c-black);
-  transform: rotateY(180deg);
-  overflow-y: auto;
-}
-
-.flip-card-back .body-text {
-  font-size: 1.05rem;
-  line-height: 1.55;
-  margin-bottom: 0.8rem;
-  color: var(--c-black);
-}
-
-.flip-card-back h3 {
-  font-size: 1.25rem;
-  font-weight: 800;
-  color: var(--c-black);
-}
-
-.flip-card-btn-container {
-  margin-top: 2rem;
-  z-index: 10;
+  margin: 0;
 }
 
 /* =========================================
@@ -524,41 +297,114 @@ img { max-width: 100%; height: auto; display: block; }
 [data-animate].is-visible { opacity: 1; transform: translateY(0); }
 
 /* =========================================
-   RESPONSIVE
+   RESPONSIVE (MOBILE)
    ========================================= */
 @media (max-width: 868px) {
   .section { padding: var(--sp-md) 0; }
-  .grid-layout, .grid-layout-3 { text-align: center; }
-  .feature-item { flex-direction: column; text-align: center; }
-  .feature-item-vertical:hover .number { transform-origin: center; }
-  .footer .grid-layout { text-align: center; gap: var(--sp-md); }
-  .footer-social { text-align: center; }
+  .grid-layout { text-align: center; }
   
-  .hero-banner {
-    flex-direction: column;
-    padding: 1.5rem 1.5rem 2.5rem 1.5rem;
-    margin-top: 60px;
-    width: 90%;
-  }
-  .floating-pizzas {
-    width: 120%;
-    max-width: 380px;
-    margin-top: 1rem;
-    margin-bottom: 2rem;
-  }
-  .hero-text-col { padding-right: 0; }
-  .hero-brand-circle { max-width: 220px; }
-  .hero-btn-container { margin-top: 2rem; }
+  .hero-banner { padding: 2rem 1.5rem; width: 90%; }
+  .hero-title-main { font-size: 2.2rem; }
+  .hero-btn-container { flex-direction: column; width: 90%; align-items: center; }
+  .btn-large { width: 100%; margin-left: 0; margin-bottom: 10px; }
+  
+  .eco-center { width: 100%; display: flex; justify-content: center; }
+  .highlight-card { transform: scale(1); }
+  .highlight-card:hover { transform: translateY(-5px); }
+  
+  .custom-list li { text-align: left; }
+}
 
-  .modelo-exito-grid {
-    flex-direction: column;
-    padding: var(--sp-md);
+/* =========================================
+   ESTILOS SECCIONES 6 A 10 (ACTUALIZADO)
+   ========================================= */
+
+/* Variación para listas en fondos blancos */
+.custom-list.list-dark li {
+  color: var(--c-black);
+}
+
+/* Lista dividida en 2 columnas (Sección Web) */
+.list-2-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 20px;
+}
+
+/* Borde decorativo para las imágenes de los beneficios */
+.border-gold { 
+  border: 4px solid var(--c-gold); 
+}
+
+/* Botón Negro (Sección Financiación) */
+.btn-black { 
+  background: var(--c-black); 
+  color: var(--c-white); 
+  border: 2px solid var(--c-black); 
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); 
+}
+.btn-black:hover { 
+  transform: translateY(-3px); 
+  background: #222; 
+  border-color: #222; 
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6); 
+}
+
+/* Grilla con imagen más grande (Sección Proveedores) */
+.grid-layout-large-img {
+  display: grid;
+  grid-template-columns: 1fr 1.25fr; /* La 2da columna toma un 25% más de espacio */
+  gap: var(--sp-lg);
+}
+
+/* RESPONSIVE MÓVIL */
+@media (max-width: 868px) {
+  .reverse-mobile {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  
+  .grid-layout-large-img {
+    grid-template-columns: 1fr;
     text-align: center;
   }
-  .modelo-exito-img {
-    max-width: 280px;
-    margin-top: 1rem;
+  
+  /* En móviles, la cita de proveedores vuelve a centrarse */
+  .grid-layout-large-img .quote-box {
+    text-align: left;
   }
 
-  .flip-card { height: 440px; }
+/* Lista dividida en 2 columnas con centrado perfecto (Sección Web) */
+.list-2-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px 40px; /* Más espacio entre las columnas */
+  width: fit-content; /* Hace que la caja mida exactamente lo que miden los textos */
+  margin: 0 auto; /* Centra la caja en la pantalla */
+}
+
+/* =========================================
+   ESTILOS SECCIONES 11 A 15
+   ========================================= */
+
+/* Fondo oscuro auxiliar */
+.bg-black {
+  background-color: var(--c-black);
+}
+
+/* Grilla para las imágenes de Antes y Después */
+.grid-layout-before-after {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-lg);
+  align-items: center;
+}
+
+@media (max-width: 868px) {
+  .grid-layout-before-after {
+    grid-template-columns: 1fr;
+    gap: var(--sp-md);
+  }
+}
+
 }
